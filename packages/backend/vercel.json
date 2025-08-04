@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "echo 'No build needed'",
+  "functions": {
+    "api/graphql.ts": {
+      "runtime": "vercel-nodejs@20.x",
+      "memory": 512,
+      "maxDuration": 10
+    }
+  }
+}

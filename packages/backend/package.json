@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Ed tech learning platform",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node api/graphql.js",
+    "build": "echo 'No build step needed for backend'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvsowndapan/EdTech.git"
+  },
+  "keywords": [
+    "edTech"
+  ],
+  "author": "sowndapan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvsowndapan/EdTech/issues"
+  },
+  "homepage": "https://github.com/mvsowndapan/EdTech#readme",
+  "dependencies": {
+    "@vercel/node": "^5.3.10",
+    "apollo-server-express": "^3.13.0",
+    "apollo-server-micro": "^3.13.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "graphql": "^16.11.0"
+  }
+}
