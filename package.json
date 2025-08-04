@@ -14,7 +14,7 @@
     "url": "git+https://github.com/mvsowndapan/EdTech.git"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=18.0.0 <23.0.0"
   },
   "scripts": {
     "dev:frontend": "yarn workspace frontend dev",
