@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Ed tech learning platform",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "node src/server.js",
     "start": "node api/graphql.js",
