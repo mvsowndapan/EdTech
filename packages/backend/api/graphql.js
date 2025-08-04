@@ -1,13 +1,12 @@
-import { ApolloServer } from "apollo-server-micro";
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+const { ApolloServer } = require("apollo-server-micro");
 
-import typeDefs from "../src/graphql/schema"; // adjust your path
-import resolvers from "../src/graphql/resolvers";
+const typeDefs = require("../src/graphql/schema"); // adjust your path
+const resolvers = require("../src/graphql/resolvers");
 
 const apolloServer = new ApolloServer({ typeDefs, resolvers });
 const startServer = apolloServer.start();
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+module.exports = async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -19,9 +18,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   await startServer;
   return apolloServer.createHandler({ path: "/api/graphql" })(req, res);
-}
+};
 
-export const config = {
+module.exports.config = {
   api: {
     bodyParser: false,
   },
