@@ -1,0 +1,22 @@
+{
+  "name": "edtech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev:backend": "yarn workspace backend dev",
+    "dev": "concurrently \"yarn dev:frontend\" \"yarn dev:backend\"",
+    "dev-vercel": "vercel dev",
+    "build": "echo 'Monorepo root build - no-op'"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
