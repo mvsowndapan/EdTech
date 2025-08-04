@@ -3,7 +3,7 @@
   "version": 2,
   "buildCommand": "echo 'No build needed'",
   "functions": {
-    "api/graphql.ts": {
+    "api/graphql.js": {
       "runtime": "vercel-nodejs@20.0.0",
       "memory": 512,
       "maxDuration": 10
